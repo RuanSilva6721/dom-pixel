@@ -1,4 +1,4 @@
-# API DomPixel
+# DomPixel
 
 Teste em Laravel.
 
@@ -14,7 +14,7 @@ Clone o projeto, usando o comando abaixo (usando HTTPS):
 
 ```bash
 
-git clone https://github.com/RuanSilva6721/api_dom_pixel.git
+git clone https://github.com/RuanSilva6721/dom_pixel.git
 ```
 
 
@@ -23,7 +23,7 @@ Depois de clonar, acesse o repositório e instale as dependências com os comand
 
 ```bash
 
-cd api_dom_pixel
+cd dom_pixel
 composer install
 ```
 
@@ -67,7 +67,7 @@ Caso queira adicionar dados fictícios para o seu usuário no banco:
 
 ```bash
 
-php artisan db:seed --class=ProductSeeder
+php artisan db:seed 
 ```
 
 
@@ -123,14 +123,9 @@ Para acessar o container da aplicação, execute:
 
 ```bash
 
-docker-compose exec -it [container da aplicação] bash
+docker-compose exec -it app bash
 ```
 
-Instale as dependências com os comandos abaixo:
-
-```bash
-composer install
-```
 
 Execute o comando abaixo para que as tabelas sejam criadas no banco de dados:
 
@@ -144,9 +139,8 @@ Caso queira adicionar dados fictícios para o seu usuário no banco:
 
 ```bash
 
-php artisan db:seed --class=BrandSeeder & php artisan db:seed --class=ProductSeeder
+php artisan db:seed 
 ```
-
 
 
 Caso queira fazer testes unitários e de integração:
@@ -156,31 +150,6 @@ Caso queira fazer testes unitários e de integração:
 php artisan test
 ```
 
-
-## Rotas
-
-A API disponibiliza as seguintes rotas:
-
-- `GET /applianceProduct`: Retorna a lista de todos os produtos cadastrados. 
-- `GET /applianceProduct/{id}`: Retorna os detalhes de um produto específico. 
-
-- `POST /applianceProductCreate`: Cria um novo registro de produto. 
-- `PUT /applianceProduct/{id}`: Atualiza um produto existente. 
-- `DELETE /applianceProduct/{id}`: Remove um produto existente.
-
-## Exemplo de Payload de Product
-
-```json
-{
-    "id": 1,
-    "name": "gfgfghdfddfd",
-    "description": "ghghghgfsfddfs",
-    "price": "0.09",
-    "stock_quantity": 3,
-    "created_at": "2023-07-22T16:31:03.000000Z",
-    "updated_at": "2023-07-22T16:41:35.000000Z"
-}
-```
 
 ## Construído com 
 - [Laravel](https://laravel.com/)
