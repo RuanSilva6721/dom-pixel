@@ -38,12 +38,29 @@ class ProductController extends Controller
         }
         
     }
+    public function create()
+    {
+        try {
+            return view('products.form');
+        } catch (Exception $e) {
+            echo 'Exceção capturada: ',  $e->getMessage(), "\n";
+        }
+    }
+    public function store(Request $request)
+    {
+        try {
+            $product = $this->productService->createProduct($request);
+            return redirect('/product');
+        } catch (Exception $e) {
+            echo 'Exceção capturada: ',  $e->getMessage(), "\n";
+        }
+    }
 
     public function edit($id)
     {
         try {
             $product = $this->productService->getProductOne($id);
-            return view('products.edit', ["product" => $product]);
+            return view('products.form', ["product" => $product]);
         } catch (Exception $e) {
             echo 'Exceção capturada: ',  $e->getMessage(), "\n";
         }
