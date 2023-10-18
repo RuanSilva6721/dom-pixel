@@ -71,16 +71,6 @@ php artisan db:seed
 ```
 
 
-
-Caso queira fazer testes unitário e de integração:
-
-```bash
-
-php artisan test
-```
-
-
-
 **Caso queira rodar em Docker, utilize o comando:** 
 
 Inicie o Docker em sua máquina e depois execute para subir o container da aplicação e subir o db postgres:
@@ -90,7 +80,7 @@ Inicie o Docker em sua máquina e depois execute para subir o container da aplic
 cd docker-compose up -d
 ```
 
-Veja se o container da aplicação e o db postgres estão de pé:
+Veja se o container da aplicação e o db postgres estão de pé(precisar ter os 2 containers):
 
 ```bash
 
@@ -142,13 +132,6 @@ Caso queira adicionar dados fictícios para o seu usuário no banco:
 php artisan db:seed 
 ```
 
-
-Caso queira fazer testes unitários e de integração:
-
-```bash
-
-php artisan test
-```
 
 
 ## Construído com 
